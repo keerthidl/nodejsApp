@@ -1,0 +1,17 @@
+<style>
+  form{
+      text-align: center;
+      line-height: 3;
+      border: 1px solid co;
+      
+    }
+
+</style>
+<form method="POST">
+    <div>first_name = <input name="first_name" value="<%= students.first_name %>"/></div>
+    <div>last_name = <input name="last_name" value="<%= students.last_name %>"/></div>
+    <div>email = <input name="email" value="<%= students.email %>"/></div>
+    <div>phoneNumber = <input name="phoneNumber" value="<%= students.phoneNumber %>"/></div>
+    <button>save</button>
+    <input type="hidden" value=" <%= students.first_name %>"/>
+</form>

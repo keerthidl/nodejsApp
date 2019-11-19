@@ -1,0 +1,54 @@
+<style>
+   .table-wrapper table {
+       border-collapse: collapse;
+       margin: 10px;
+       text-align: center;
+       width: 98%;
+       padding: 10px;
+   }
+
+   .table-wrapper thead{
+       line-height: 2;
+   }
+
+   .table-wrapper thead th, td{
+       padding: 8px;
+       text-align: left;
+       border-bottom:1px solid #ddd;
+       
+   }
+</style>
+<h1>Student List</h1>
+
+
+<div class="table-wrapper col-md-12">
+        
+   
+
+    <a href="/form" style="text-align: right; display:block">Form Insert</a>
+    <table class="table table-hovered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">first_name</th> 
+                <th scope="col">last_name</th>
+                <th scope="col">email</th>
+                <th scope="col">phoneNumber</th>
+                <th scope="col"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach(function(item) {%>
+                <tr>
+                    <td><%= item.first_name %></td>
+                    <td><%= item.last_name %></td>
+                    <td><%= item.email %></td>
+                    <td><%= item.phoneNumber %></td>
+                    <td>
+                        <a href="/delete?first_name=<%= item.first_name %>" onClick="return confirm('are u sure?')" class="btn btn-sm btn-danger">Delete</a>
+                        <a href="/edit?first_name=<%= item.first_name %>" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table> 
+</div>
