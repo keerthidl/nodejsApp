@@ -18,6 +18,11 @@ var db = mysql.createPool({
 
 
 /**
+* get data 
+*/
+
+
+/**
  * get list of all students from the data base and display 
  * it in the table 
  */
@@ -42,7 +47,7 @@ router.get('/form', function(req,res, next){
  */
 router.post('/form', function(req, res, next){
   db.query('INSERT INTO students SET ?', req.body, function(err, result){
-    res.send('insert successful');
+    res.send('inserted ');
   })
 })
 
