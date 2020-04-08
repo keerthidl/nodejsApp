@@ -61,11 +61,11 @@ router.get('/delete', function(req,res,next){
  *editing particular data , this will populate data in
  the form which has to be edited.
  */
-router.get('/edit', function(req,res,next){
-  db.query('SELECT * FROM students WHERE first_name = ?',req.query.first_name, function(err, result){
-    res.render('form', {students: result[0]});
-  })
-});
+// router.get('/edit', function(req,res,next){
+//   db.query('SELECT * FROM students WHERE first_name = ?',req.query.first_name, function(err, result){
+//     res.render('form', {students: result[0]});
+//   })
+// });
 
 /**
  * saving the edited data. returns to student list 
